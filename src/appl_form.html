@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заявка</title>
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<header class="header header-appl-form">
+    <div class="container">
+        <div class="logo header__logo">
+            <img src="../images/icons/logo_white.svg" alt="OPENZAIM" class="logo__img">
+        </div>
+    </div>
+</header>
+<div class="application-form oz-form">
+    <div class="container">
+        <h2 class="title">Получение <span class="amonutVal">150 000</span> ₽</h2>
+
+        <div class="form-wrapper">
+            <h3 class="form-header">
+                <span class="header--first-row">Заявка на получение</span> - <span class="amonutVal">150 000</span> рублей (шаг <span class="stepNum">1</span> из 4)
+            </h3>
+            <div class="form-header--sub">
+                <span class="green-rect"></span>
+                <h6 class="subtitle status">+10% к одобрению за добавление номера Вашего мобильного телефона</h6>
+            </div>
+
+            <form class="form needs-validation" novalidate name="applForm" data-step="1">
+                <div class="step" data-step-num="1">
+                    <div class="row row--amount">
+                        <div class="label-wrapper">
+                            <span class="label">Сумма</span>
+                        </div>
+                        <div class="col">
+                            <div class="range-wrapper">
+                                <div class="range amount-appl">
+                                    <input id="amountRange" type="range" min="3000" max="500000" step="1000" value="150000">
+                                    <div class="range-output">
+                                        <output class="output" for="amountRange">
+                                            150 000 &#8381;
+                                        </output>
+                                    </div>
+                                    <div class="range-minmax">
+                                        <div class="min"></div>
+                                        <div class="max"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--term">
+                        <div class="label-wrapper">
+                            <span class="label">Срок</span>
+                        </div>
+                        <div class="col">
+                            <div class="range-wrapper">
+                                <div class="range year-appl">
+                                    <input id="yearRange" type="range" min="3" max="1095" step="1" value="549">
+                                    <div class="range-output">
+                                        <output class="output" for="yearRange">
+                                            1.5 года
+                                        </output>
+                                    </div>
+                                    <div class="range-minmax">
+                                        <div class="min"></div>
+                                        <div class="max"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-6">
+                            <div class="form-group ">
+                                <label class="form-control-label with-ic">
+                                    <input type="text" class="form-control disabled" placeholder="Фамилия Имя Отчество" required id="fio">
+                                    <div class="form-control-img">
+                                        <svg class="ic-svg ic-ufo"><use xlink:href="images/icons/sprite.svg#ic-ufo"/></svg>
+                                        <svg class="ic-svg ic-female"><use xlink:href="images/icons/sprite.svg#ic-female"/></svg>
+                                        <svg class="ic-svg ic-male"><use xlink:href="images/icons/sprite.svg#ic-male"/></svg>
+                                    </div>
+                                    <span class="form-control-title">Фамилия Имя Отчество</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="form-control-label with-ic">
+                                    <input type="text" class="form-control disabled" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                           placeholder="Электронная почта" required  id="email">
+                                    <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-at"/></svg></div>
+                                    <span class="form-control-title">Электронная почта</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xl-6">
+                            <div class="form-group ">
+                                <label class="form-control-label with-ic">
+                                    <input type="text" class="form-control disabled" placeholder="Дата рождения" data-mask="__.__.____" required id="dateBirth" pattern="^([0]?[1-9]|[1|2][0-9]|[3][0|1])[.-]([0]?[1-9]|[1][0-2])[.-]([0-9]{4}|[0-9]{2})$">
+                                    <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-cake"/></svg></div>
+                                    <span class="form-control-title">Дата рождения</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="form-control-label with-ic">
+                                    <input type="text" class="form-control disabled" placeholder="Мобильный телефон" required id="phone" data-mask="+7 (9__) ___ __ __">
+                                    <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-call"/></svg></div>
+                                    <span class="form-control-title">Мобильный телефон</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step-num="2">
+                    <div class="row-wrapper passport-info">
+                        <h4 class="title">Уважаемый заёмщик, укажите свои паспортные данные</h4>
+                        <div class="row">
+                            <div class="col-md-12 col-xl-6">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Серия и номер паспорта" data-mask="____ _____" id="p_number">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-passport"/></svg></div>
+                                        <span class="form-control-title">Серия и номер паспорта</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-xl-6">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Дата выдачи"  id="p_date" data-mask="__.__.____" pattern="^([0]?[1-9]|[1|2][0-9]|[3][0|1])[.-]([0]?[1-9]|[1][0-2])[.-]([0-9]{4}|[0-9]{2})$">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-calendar"/></svg></div>
+                                        <span class="form-control-title">Дата выдачи</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xl-6">
+                                <div class="form-group ">
+                                    <label class="form-control-label">
+                                        <input type="text" class="form-control disabled" placeholder="Код подразделения" id="p_code">
+                                        <span class="form-control-title">Код подразделения</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-xl-6">
+                                <div class="form-group ">
+                                    <label class="form-control-label">
+                                        <input type="text" class="form-control disabled" placeholder="Кем выдан" id="p_place">
+                                        <span class="form-control-title">Кем выдан</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper work-info">
+                        <h4 class="title">Место работы</h4>
+                        <div class="row row--work">
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Укажите место работы" id="place_work">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-suitcase"/></svg></div>
+                                        <span class="form-control-title">Место работы</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" data-step-num="3">
+                    <div class="row-wrapper address-info">
+                        <h4 class="title">Адрес регистрации по паспорту</h4>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Область / Регион" id="region_l">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-meetpoint"/></svg></div>
+                                        <span class="form-control-title">Область / Регион</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Город / Населённый пункт" id="city_l">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-building"/></svg></div>
+                                        <span class="form-control-title">Город / Населённый пункт*</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label">
+                                        <input type="text" class="form-control disabled" placeholder="Улица*" id="st_l">
+                                        <span class="form-control-title">Улица*</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <div class="row row-home">
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Дом" id="hse_l">
+                                                <span class="form-control-title">Дом</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Корпус" id="bldg_l">
+                                                <span class="form-control-title">Корпус</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Квартира" id="apt_l">
+                                                <span class="form-control-title">Квартира</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper address-btns">
+                        <h4 class="title">Адрес регистрации совпадает с адресом проживания?</h4>
+                        <div class="row">
+                            <div class="col-md-12 buttons">
+                                <button type="submit" class="btn bubbly-button bubbly-button-green" id="yesBtn">Да, я живу там где прописан</button>
+                                <button type="button" class="btn bubbly-button bubbly-button-pink" id="noBtn">Нет, я проживаю по другому адресу</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper d-none" id="factAddress">
+                        <h4 class="title">Адрес проживания</h4>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Область / Регион" id="region_r">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-meetpoint"/></svg></div>
+                                        <span class="form-control-title">Область / Регион</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label with-ic">
+                                        <input type="text" class="form-control disabled" placeholder="Город / Населённый пункт" id="city_r">
+                                        <div class="form-control-img"><svg class="ic-svg"><use xlink:href="images/icons/sprite.svg#ic-building"/></svg></div>
+                                        <span class="form-control-title">Город / Населённый пункт*</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="form-group ">
+                                    <label class="form-control-label">
+                                        <input type="text" class="form-control disabled" placeholder="Улица*" id="st_r">
+                                        <span class="form-control-title">Улица*</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <div class="row row-home">
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Дом" id="hse_r">
+                                                <span class="form-control-title">Дом</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Корпус" id="bldg_r">
+                                                <span class="form-control-title">Корпус</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="form-control-label">
+                                                <input type="text" class="form-control disabled" placeholder="Квартира" id="apt_r">
+                                                <span class="form-control-title">Квартира</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step check-data" data-step-num="4">
+                    <div class="check-data__in">
+                        <h4 class="title">Проводим скориннг полученных данных</h4>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Фамилия имя отчество</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_fio">Иванов Иван Иванович</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item d-block" id="applicant_sex">Муж</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Дата рождения</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_dateB">31.12.1990 г.</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item d-block" id="applicant_age">29 лет</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--invalid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Электронная почта</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_email">test@mail.ru</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Электронная почта доступна</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Телефон</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_phone">+7 (904) 207-33-33</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item d-block">Теле 2</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Голосовой звонок</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item"></div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Доступен</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">SMS</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item"></div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Доступен</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">MMS</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item"></div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Доступен</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Объявления на торговых площадках</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item"></div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Найдено</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item">
+                                    <span class="ic-status ic-status--valid"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Проверка паспорта</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_passport">8710 422442</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Паспорт в списке утереных не найден</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Дата выдачи</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_passportDate">31.12.2010 г.</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Паспорт действителен</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Адрес регистрации</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="applicant_address">Нижний Новгород, ул.Деловая 24 корп2, кв.58</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Адрес найден</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Задолжности в ФССП</div>
+                            <div class="check-row-el check-value"><div class="check-row-el__item"></div></div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Проверенно</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Профили в социальных сетях</div>
+                            <div class="check-row-el check-value"><div class="check-row-el__item"></div></div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item">Проверенно</div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">IP адрес</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="ipadress">23.123.123.123</div>
+                            </div>
+                            <div class="check-row-el check-status">
+                                <div class="check-row-el__item"></div>
+                            </div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Браузер</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="browserName">Яндекс браузер</div>
+                            </div>
+                            <div class="check-row-el check-status"></div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Опереационная система</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="osName">Windows 10</div>
+                            </div>
+                            <div class="check-row-el check-status"></div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                        <div class="check-row">
+                            <div class="check-row-el check-label">Устройство</div>
+                            <div class="check-row-el check-value">
+                                <div class="check-row-el__item" id="deviceName">Компьютер</div>
+                            </div>
+                            <div class="check-row-el check-status"></div>
+                            <div class="check-row-el check-status-ic">
+                                <div class="check-row-el__item"><span class="ic-status ic-status--loader"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <div class="row">
+                        <div class="col-xl-9 col-md-12 footer-text-wrapper">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox" class="form__footer-text check-box"  data-step-num="1">
+                                <i class="box"></i> Даю согласие на обработку персональных данных и на получение материалов рекламного характера, а также согласен с публичной офертой и документами.
+                            </label>
+
+                            <div class="justify-content-between align-items-center"  data-step-num="2">
+                                <div class="prev-btn-wrapper">
+                                    <a href="#" id="prev" class="goback">Назад</a>
+                                </div>
+                                <div class="col-md-12 col-xl-7 form__footer-text">
+                                    Уважаемый клиент, ещё совсем немного,
+                                    Вы прошли почти половину пути!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-12 d-flex submit-wrapper ">
+                            <button type="submit" class="btn bubbly-button bubbly-button-green" id="next">Далее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" id="surname" value="">
+                <input type="hidden" id="name" value="">
+                <input type="hidden" id="patronymic" value="">
+                <input type="hidden" id="gender" value="">
+            </form>
+        </div>
+
+    </div>
+</div>
+<footer class="footer bg-darkgrey">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-menublock">
+                <ul class="menu">
+                    <li class="menu_item"><a href="about.html#" class="menu_link  smooth_scroll">О компании</a></li>
+                    <li class="menu_item"><a href="about.html#reviews-block" class="menu_link  smooth_scroll">Отзывы</a></li>
+                    <li class="menu_item"><a href="about.html#feedback-block" class="menu_link  smooth_scroll">Помощь</a></li>
+                    <li class="menu_item"><a href="about.html#documents" class="menu_link  smooth_scroll">Документы</a></li>
+                    <li class="menu_item"><a href="login_form.html#" class="menu_link  smooth_scroll">Личный кабинет</a></li>
+                </ul>
+                <ul class="menu icon_bar">
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-visa.svg" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-mastercard.svg" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-mir.png" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-uniteller.png" alt="" class="menu_img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text__row">
+                    <p class="footer-title bold">Zaym-Center © 2020 Все права на сайт защищены</p>
+                </div>
+                <div class="footer-text__row">
+                    <p class="paragrfaph">
+                        Услуги по подбору займов на проекте «Zaym-Center» оказываются ООО «Лид Профит» ОГРН 1205200014579 , ИНН/КПП 5257196322/525701001,
+                        являющимся оператором обработки персональных данных,</p>
+                    <p class="paragrfaph">
+                        Проект осуществляет только подбор кредитов и микрозаймов между лицом желающим взять займ, и кредитными учреждениями, которые на
+                        основании ФЗ «О потребительском кредите (займе)» от 21.12.2013 № 353-ФЗ имеют право осуществлять профессиональную деятельность по
+                        предоставлению потребительских займов. Проект не является финансовым учреждением, банком или кредитором, и не несёт ответственности
+                        за любые заключенные договоры кредитования или условия. Чтобы оформить заявку на получение займа, Вам необходимо пройти регистрацию
+                        и аутентификацию на проекте.</p>
+                    <p class="paragrfaph">ООО «Лид Профит» является операторами персональных данных (<a href="" class="link link__light">Приказ № 197-нд от 08.06.2018</a>).</p>
+                    <p class="paragrfaph">
+                        Сервис «Zaym-Center» использует куки для предоставления услуг. Условия хранения или доступа к куки Вы можете настроить в своём браузере.
+                        Сервис предназначен для лиц старше 18 лет. Расчет в калькуляторах на сайте основан на среднем показателе процентной ставки кредитов РФ.
+                        Не является публичной офертой. Расчет может значительно отличаться от реальной процентной ставки, которая будет предложена вам финансовыми
+                        организациями.</p>
+                </div>
+                <div class="footer-text__row">
+                    <p class="paragrfaph bold attention">
+                        Внимание! Услуга «Активация сервиса» по обработке заявки является платной и составляет 349 руб. Для отключения подписки удалите карты в
+                        &nbsp;<a href="my_form.html" class="link bold">личном кабинете </a> &nbsp;сайта. Активация сервиса не гарантирует вам получение займа.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+</body>
+</html>

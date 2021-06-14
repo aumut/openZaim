@@ -1,0 +1,101 @@
+.text-block
+  width: 100%
+  padding-top: 50px
+  padding-bottom: 30px
+  +laptop-down
+    padding: 0
+  .container
+    padding: 0 30px
+    +laptop-down
+      min-width: 700px
+      padding: 20px 15px
+    +tablet-down
+      min-width: 310px
+      padding: 20px 10px
+
+  .title
+    letter-spacing: 0
+    width: 100%
+    text-align: center
+    +laptop-down
+      text-align: left
+
+  .paragrfaph
+    letter-spacing: 1
+    line-height: 1.7
+    margin-bottom: 26px
+    &:last-child
+      margin-bottom: 0
+    +laptop-down
+      margin-bottom: 10px
+      font-size: 16px
+      line-height: 1.66
+      letter-spacing: 1
+    +tablet-down
+      margin-bottom: 20px
+  .link
+    text-align: left
+    +laptop-down
+  		font-size: 16px
+  .bubbly-button
+    box-shadow: none
+    +laptop-down
+      margin-top: 10px
+    +tablet-down
+      margin-top: 0px
+
+  &__head
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-bottom: 42px
+    +laptop-down
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 0px
+    +tablet-down
+      align-items: flex-end
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    font-family: $font-Exo2-Light
+    font-size: 18px
+    width: 100%
+    +laptop-down
+      margin-top: 20px
+    +tablet-down
+      margin-top: 30px
+
+.link-bar
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+  width: 100%
+
+// .btn-accordion
+//   display: flex
+//   background-repeat: no-repeat
+//   background-size: 25px 25px
+//   background-position: right center
+//   cursor: pointer
+//   width: 100%
+//   padding: 0
+//   +laptop-down
+//     display: flex
+//   +tablet-down
+//     background-position: right bottom
+//     padding-right: 1px
+//
+// .btn-accordion__show
+//   background-image: none
+//   +laptop-down
+//     background-image: url("../images/icons/ic-arrow-down.svg")
+// .btn-accordion__hide
+//   background-image: none
+//   +laptop-down
+//     background-image: url("../images/icons/ic-arrow-up.svg")

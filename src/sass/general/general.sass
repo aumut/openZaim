@@ -1,0 +1,305 @@
+*
+	&:focus, &:active
+		outline: none !important
+
+html
+	//overflow: hidden
+	font-size: $fontSize_body
+
+body
+	font:
+		family: $font-Exo2-Light
+		size: 1rem
+		weight: 400
+	color: $fontColorMain
+	line-height: 1
+	min-width: $phone-width-min
+	margin: 0
+	padding: 0
+	height: 100vh
+	+tablet
+		font-size: $fontSize_body_tablet
+
+h1, h2, h3, h4, h6, p, ul, label, .form-group
+	margin: 0px
+	padding: 0px
+
+a
+	&:hover, &:visited
+		color: inherit
+		text-decoration: none
+
+h1
+	font-size: $fontSize_h1
+	line-height: $lineHeight_h1
+	font-weight: normal
+	+laptop-down
+		font-size: $fontSize_h1_tablet
+h2
+	font-size: $fontSize_h2
+	line-height: $lineHeight_h2
+	+laptop-down
+		font-size: $fontSize_h2_tablet
+
+h3
+	font-size: $fontSize_h3
+	line-height: $lineHeight_h3
+	+laptop-down
+		font-size: $fontSize_h3_tablet
+
+h4
+	font-size: $fontSize_h4
+	line-height: $lineHeight_h4
+	// +tablet
+		//font-size: $fontSize_h4_tablet
+
+.container
+	margin: 0 auto
+	+laptop
+		max-width: 1510px
+	+phonemin-down
+		padding-left: 10px
+		padding-right: 10px
+
+
+.title
+	color: $fontColorMain
+	font-family: $font-Exo2-Bold
+	letter-spacing: -0.4px
+
+.bold
+	font-family: $font-Exo2-Semibold
+	font-weight: 600
+	font-size: 18px
+	line-height: 1.22
+
+.link
+  text-decoration: none
+  text-decoration-line: underline
+  color: $green!important
+  font-family: $font-Exo2-Semibold
+  font-weight: bold
+  font-size: 18px
+  line-height: 1.6
+
+.link__light
+	font-family: $font-Exo2-Light
+	font-weight: 300
+	font-size: 16px
+	line-height: 1.19
+
+.title__white
+	color: #FFFFFF
+
+.bg-darkgrey
+	background-color: $dark-grey
+	color: $white
+
+.bg-lightgrey
+	background-color: $body_bg
+	color: $dark-grey
+
+.paragrfaph
+	display: flex
+	width: 100%
+	text-align: left
+	margin-bottom: 30px
+	line-height: 1.645
+	&:last-child
+		margin-bottom: 0
+	&__nospace
+		margin-bottom: 0!important
+
+.menu
+	list-style: none
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	//background-color: green
+.menu_item
+	margin: 0 50px 0 0
+.menu_link
+	text-decoration: none
+	color: #FFFFFF
+	font-family: $font-Exo2-Medium
+	font-size: 18px
+	padding: 15px 0px
+
+
+.gradient-bg
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+	background-size: 400% 400%
+	animation: gradient 15s ease infinite
+	opacity: .99
+
+@keyframes gradient
+	0%
+		background-position: 0% 50%
+
+	50%
+		background-position: 100% 50%
+
+	100%
+		background-position: 0% 50%
+
+.small-text
+	font-family: "Exo2-Medium", Arial, sans-serif
+	font-size: 14px
+	line-height: 17px
+
+.btn
+	display: inline-block
+	font-family: $font-Exo2-Medium
+	font-size: 24px
+	line-height: 32px
+	color: $button-text-color
+	padding: 20px 40px
+	-webkit-appearance: none
+	appearance: none
+	border-radius: 0px
+	border: none
+	cursor: pointer
+	position: relative
+	+laptop-down
+		padding: 15px 40px
+	&:hover
+		color: $button-text-color
+	&:focus, &:active
+		outline: 0
+		color: $button-text-color
+		box-shadow: none
+
+.btn-close
+	padding: 0px
+	+bg-image(41px, 28px, transparent, "../images/icons/ic-union.png", contain)
+
+.btn-gamburg
+	padding: 0px
+	+bg-image(41px, 28px, transparent, "../images/icons/ic-gamburg.png", contain)
+
+.btn-accordion
+  display: flex
+  background-repeat: no-repeat
+  background-size: 25px 25px
+  background-position: right center
+  cursor: pointer
+  width: 100%
+  padding: 0
+  +laptop-down
+    display: flex
+  +tablet-down
+    background-position: right bottom
+    padding-right: 1px
+
+.btn-accordion__show
+  background-image: none
+  +laptop-down
+    background-image: url("../images/icons/ic-arrow-down.svg")
+.btn-accordion__hide
+  background-image: none
+  +laptop-down
+    background-image: url("../images/icons/ic-arrow-up.svg")
+
+.contacts
+	&__phone
+		letter-spacing: 1px
+
+.logo
+	display: flex
+	width: 270px
+	height: 72px
+	+laptop-down
+		width: 180px
+		height: 28px
+	&__link
+		display: flex
+	&__img
+		width: 100%
+		height: auto
+
+//.logo-my
+	width: 153px
+	height: 43px
+
+.g-recaptcha
+	transform: scale(0.9)
+	transform-origin: 0
+	+laptop_1-down
+		transform: scale(0.75)
+
+.oz-dialog
+	height: 100%
+	display: flex
+	align-items: center
+	align-self: center
+	justify-content: center
+	.modal-header
+		padding: 70px 28px 25px
+		border-width: 0px
+		+laptop-down
+			padding: 54px 28px 35px
+		+tablet-down
+			padding: 56px 10px 30px
+		.close
+			position: absolute
+			right: 26px
+			top: 28px
+			+bg-image(36px, 36px, transparent, "../images/icons/ic-multiply.png", contain)
+
+			+laptop-down
+				right: 30px
+				top: 33px
+			+tablet-down
+				right: 26px
+				top: 28px
+
+	.modal-title
+		width: 100%
+		text-align: center
+		letter-spacing: 0.02px
+		+laptop-down
+			font-size: 28px
+		+tablet-down
+			font-size: 24px
+			line-height: 29px
+	.modal-body
+		//padding: 0px 16px 25px
+		padding: 0px 0px 30px 30px
+		+laptop-down
+			padding: 0px 0px 28px 0px
+		+tablet-down
+			padding: 0px 0px 40px 0px
+	.modal-footer
+		padding: 0px 16px 65px
+		border-width: 0px
+		+laptop-down
+			padding: 0px 0px 50px
+		+tablet-down
+			padding: 0px 0px 38px
+		.row
+			+tablet-down
+				flex-direction: column
+				align-items: center
+	.modal-footer>*
+		margin: 0px
+	.btn
+		width: 100%
+		+laptop-down
+			height: 100%
+	.row
+		width: 100%
+		+laptop-down
+			margin: 0px
+
+.ic-status
+	display: inline-flex
+	min-width: 14px
+	min-height: 14px
+	+bg-image(14px, 14px, transparent, '', contain)
+	&--invalid
+		background-image: url("../images/icons/ic-datacheck-err.svg")
+	&--valid
+		background-image: url("../images/icons/ic-datacheck-ok.svg")
+	&--loader
+		background-image: url("../images/icons/ic-loader.svg")

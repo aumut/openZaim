@@ -1,0 +1,79 @@
+=clearfix
+	&::after
+		clear: both
+		content: ""
+		display: table
+
+
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+$laptop-width: 1200px
+$ipad-width: 992px
+$tablet-width: 767px
+$phone-width: 576px
+$phone-width-min: 320px
+
+=laptop
+	@media screen and (min-width: $laptop-width)
+		@content
+=ipad
+	@media screen and (min-width: $ipad-width)
+		@content
+=tablet
+	@media screen and (min-width: $tablet-width)
+		@content
+=phone
+	@media screen and (min-width: $phone-width)
+		@content
+=phone_min
+	@media screen and (min-width: $phone-width-min)
+		@content
+
+
+=laptop-down
+	@media screen and (max-width: $laptop-width)
+		@content
+=ipad-down
+	@media screen and (max-width: $ipad-width)
+		@content
+=tablet-down
+	@media screen and (max-width: $tablet-width)
+		@content
+=phone-down
+	@media screen and (max-width: $phone-width)
+		@content
+=phonemin-down
+	@media screen and (max-width: $phone-width-min)
+		@content
+
+=laptop_1-down
+	@media screen and (max-width: 1500px)
+		@content
+
+
+=scrolled($height)
+	max-height: $height
+	height: $height
+	overflow-y: scroll
+
+=retina
+	@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5), only screen and (-o-min-device-pixel-ratio : 1.5)
+		@content
+
+
+=bg-image($w, $h, $bg-col, $url, $bg-size)
+	width: $w
+	height: $h
+	background:
+		color: $bg-col
+		image: url(#{$url})
+		repeat: no-repeat
+		size: $bg-size

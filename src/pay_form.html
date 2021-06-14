@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Оплата</title>
+</head>
+<body>
+<header class="header header-appl-form">
+    <div class="container">
+        <header class="logo header__logo">
+            <img src="../images/icons/logo_white.svg" alt="OPENZAIM" class="logo__img">
+        </header>
+    </div>
+</header>
+
+<div class="application-form pay-form">
+    <div class="container">
+        <h2 class="title">Получение <span class="amonutVal">150 000</span> ₽</h2>
+
+        <div class="form-wrapper">
+            <h3 class="form-header">С карты спишется 1 рубль для её проверки!</h3>
+
+            <div class="wrapper" id="app">
+                <div class="card-form">
+                    <div class="card-list">
+                        <div class="card-item">
+                            <div class="card-item__side -front">
+                                <div class="card-item__focus" id="focusElement"></div>
+
+                                <div class="card-item__cover">
+                                    <img src="images/content/21.jpeg" class="card-item__bg">
+                                </div>
+
+                                <div class="card-item__wrapper">
+                                    <div class="card-item__top">
+                                        <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png" class="card-item__chip">
+                                        <div class="card-item__type">
+                                            <transition name="slide-fade-up">
+                                                <img src="images/icons/visa.png" alt="" class="card-item__typeImg">
+                                            </transition>
+                                        </div>
+                                    </div>
+
+                                    <label for="cardNumber" class="card-item__number" id="cardNumberLabel">
+                                        <span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem -active"> </div></span>
+                                        <span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem -active"> </div></span>
+                                        <span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem -active"> </div></span>
+                                        <span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span><span><div class="card-item__numberItem">#</div></span>
+                                    </label>
+                                    <div class="card-item__content">
+                                        <label for="cardName" class="card-item__info" id="cardNameLabel">
+                                            <div class="card-item__holder">Card Holder</div>
+                                            <transition name="slide-fade-up">
+                                                <div class="card-item__name">Full Name</div>
+                                            </transition>
+                                        </label>
+                                        <div class="card-item__date" id="cardDateLabel">
+                                            <label for="cardMonth" class="card-item__dateTitle">Expires</label>
+                                            <label for="cardMonth" class="card-item__dateItem">
+                                                <transition name="slide-fade-up">
+                                                    <span>MM</span>
+                                                </transition>
+                                            </label>
+                                            /
+                                            <label for="cardYear" class="card-item__dateItem">
+                                                <transition name="slide-fade-up">
+                                                    <span>YY</span>
+                                                </transition>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-item__side -back">
+                                <div class="card-item__cover">
+                                    <img src="images/content/21.jpeg" class="card-item__bg">
+                                </div>
+                                <div class="card-item__band"></div>
+                                <div class="card-item__cvv">
+                                    <div class="card-item__cvvTitle">CVV</div>
+                                    <div class="card-item__cvvBand">
+                                          <span>
+                                            *
+                                          </span>
+                                    </div>
+                                    <div class="card-item__type">
+                                        <img src="images/icons/visa.png" class="card-item__typeImg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-form__inner">
+                        <div class="card-input">
+                            <label for="cardNumber" class="card-input__label">Номер карты</label>
+                            <input type="text" id="cardNumber" class="card-input__input" autocomplete="off" data-label="cardNumberLabel" placeholder="5555 7777 8888 9999">
+                        </div>
+                        <div class="card-input d-none">
+                            <label for="cardName" class="card-input__label">Card Holders</label>
+                            <input type="text" id="cardName" class="card-input__input" autocomplete="off" data-label="cardNameLabel">
+                        </div>
+                        <div class="card-form__row">
+                            <div class="card-form__col">
+                                <div class="card-form__group">
+                                    <label for="cardMonth" class="card-input__label">Срок действия</label>
+                                    <select class="card-input__input -select" id="cardMonth" data-label="cardDateLabel">
+                                        <option value="" disabled selected>Месяц</option>
+                                    </select>
+                                    <select class="card-input__input -select" id="cardYear" data-label="cardDateLabel">
+                                        <option value="" disabled selected>Год</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-form__col -cvv">
+                                <div class="card-input">
+                                    <label for="cardCvv" class="card-input__label">CVV</label>
+                                    <input type="text" class="card-input__input" id="cardCvv" maxlength="4" autocomplete="off" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <button class="btn bubbly-button bubbly-button-green card-form__button">Привязать карту</button>
+
+                        </div>
+                        <!--<button class="card-form__button">                           Submit                        </button>-->
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row cards-types">
+                <div class="img-wrapper"><img src="images/content/icon-visa.png" alt="Visa"></div>
+                <div class="img-wrapper"><img src="images/content/icon-mastercard.png" alt="MasterCard"></div>
+                <div class="img-wrapper"><img src="images/content/icon-mir.png" alt="MIR"></div>
+                <div class="img-wrapper"><img src="images/content/icon-qivi.png" alt="Qiwi"></div>
+            </div>
+            <div class="form-footer">
+                <div class="form__footer-text">
+                    Для того чтобы получить услугу подбора кредитных продуктов, Вам нужно привязать Вашу банковскую карту (VISA, MASTERCARD, MIR) к аккаунту. На карте должен быть не нулевой баланс. Совершая платеж, Вы соглашаетесь с публичной офертой подписки и даете Ваше согласие на обработку персональных данных и получение рекламных материалов. Также Вы подтверждаете, что уведомлены о списании авторизационного платежа в счет стоимости услуги при привязке карты, о списании 399 (трёхсот девяноста девяти) рублей каждые 5 дней использования сервиса, на срок пять месяцев и поручаете оператору применять рекуррентные платежи. Безопасность платежей осуществляется с помощью БАНКА-ЭКВАЙЕРА, функционирующего на основе современных протоколов и технологий, разработанных международными платежными системами VISA International и MasterCard International (3D Secure, USAF). Безопасность передаваемой информации обеспечивается с помощью современных протоколов безопасности в Интернет (SSL/TLS).
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="footer bg-darkgrey">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-menublock">
+                <ul class="menu">
+                    <li class="menu_item"><a href="about.html#" class="menu_link  smooth_scroll">О компании</a></li>
+                    <li class="menu_item"><a href="about.html#reviews-block" class="menu_link  smooth_scroll">Отзывы</a></li>
+                    <li class="menu_item"><a href="about.html#feedback-block" class="menu_link  smooth_scroll">Помощь</a></li>
+                    <li class="menu_item"><a href="about.html#documents" class="menu_link  smooth_scroll">Документы</a></li>
+                    <li class="menu_item"><a href="login_form.html#" class="menu_link  smooth_scroll">Личный кабинет</a></li>
+                </ul>
+                <ul class="menu icon_bar">
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-visa.svg" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-mastercard.svg" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-mir.png" alt="" class="menu_img">
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">
+                            <img src="../images/icons/ic-uniteller.png" alt="" class="menu_img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-text">
+                <div class="footer-text__row">
+                    <p class="footer-title bold">Zaym-Center © 2020 Все права на сайт защищены</p>
+                </div>
+                <div class="footer-text__row">
+                    <p class="paragrfaph">
+                        Услуги по подбору займов на проекте «Zaym-Center» оказываются ООО «Лид Профит» ОГРН 1205200014579 , ИНН/КПП 5257196322/525701001,
+                        являющимся оператором обработки персональных данных,</p>
+                    <p class="paragrfaph">
+                        Проект осуществляет только подбор кредитов и микрозаймов между лицом желающим взять займ, и кредитными учреждениями, которые на
+                        основании ФЗ «О потребительском кредите (займе)» от 21.12.2013 № 353-ФЗ имеют право осуществлять профессиональную деятельность по
+                        предоставлению потребительских займов. Проект не является финансовым учреждением, банком или кредитором, и не несёт ответственности
+                        за любые заключенные договоры кредитования или условия. Чтобы оформить заявку на получение займа, Вам необходимо пройти регистрацию
+                        и аутентификацию на проекте.</p>
+                    <p class="paragrfaph">ООО «Лид Профит» является операторами персональных данных (<a href="" class="link link__light">Приказ № 197-нд от 08.06.2018</a>).</p>
+                    <p class="paragrfaph">
+                        Сервис «Zaym-Center» использует куки для предоставления услуг. Условия хранения или доступа к куки Вы можете настроить в своём браузере.
+                        Сервис предназначен для лиц старше 18 лет. Расчет в калькуляторах на сайте основан на среднем показателе процентной ставки кредитов РФ.
+                        Не является публичной офертой. Расчет может значительно отличаться от реальной процентной ставки, которая будет предложена вам финансовыми
+                        организациями.</p>
+                </div>
+                <div class="footer-text__row">
+                    <p class="paragrfaph bold attention">
+                        Внимание! Услуга «Активация сервиса» по обработке заявки является платной и составляет 349 руб. Для отключения подписки удалите карты в
+                        &nbsp;<a href="my_form.html" class="link bold">личном кабинете </a> &nbsp;сайта. Активация сервиса не гарантирует вам получение займа.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="main.min.js"></script>
+</body>
+</html>
